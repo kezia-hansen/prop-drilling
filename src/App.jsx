@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
+
 function App() {
   const data = {
     username: "mig",
@@ -16,9 +17,9 @@ function App() {
   };
   return (
     <>
-      <Header />
-      <ArticleList />
-      <Footer />
+      <Header username={data.username} email={data.email} />
+      <ArticleList articles={data.articles} />
+      <Footer data={data.contactInfo.email} />
     </>
   );
 }

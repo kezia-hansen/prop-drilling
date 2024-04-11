@@ -1,12 +1,12 @@
 import Article from "./Article";
-function ArticleList() {
+function ArticleList({ articles }) {
   return (
     <div>
       <h2>Vores artikler</h2>
       <div className="grid">
-        <Article />
-        <Article />
-        <Article />
+        {articles.map((ting) => {
+          return <Article header={ting.header} content={ting.content} />;
+        })}
       </div>
     </div>
   );
